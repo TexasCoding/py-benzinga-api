@@ -15,9 +15,7 @@ def test_for_nan():
         square(float("NaN"))
 
 
-@pytest.mark.parametrize(
-    "x", ["text", None, [42], (9, 1, 1), {"key": "value"}]
-)
+@pytest.mark.parametrize("x", ["text", None, [42], (9, 1, 1), {"key": "value"}])
 def test_for_invalid_types(x):
     with pytest.raises(TypeError):
         square(x)

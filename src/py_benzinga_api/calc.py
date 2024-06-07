@@ -21,7 +21,7 @@ def square(x: Union[int, float]) -> Union[int, float]:
         When input x is not an int or float
     ValueError:
         When input x is nan
-        
+
     Examples
     --------
     >>> square(2)
@@ -37,9 +37,7 @@ def square(x: Union[int, float]) -> Union[int, float]:
     ValueEror: x cannot be of type nan
     """
     if not isinstance(x, (int, float)):
-        raise TypeError(
-            f"x should be of type int or float but is of: {type(x)}"
-        )
+        raise TypeError(f"x should be of type int or float but is of: {type(x)}")
     elif math.isnan(x):
         raise ValueError("x cannot be nan")
     else:
